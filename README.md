@@ -1,19 +1,23 @@
-# demo
+# 快速使用
 
-## Project setup
-```
-npm install
-```
+## 安装依赖
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+yarn 或 pnpm
 ```
 
-### Compiles and minifies for production
+### 运行项目
+
 ```
-npm run build
+yarn serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 打包项目
+
+```
+yarn build
+```
+
+### 其他自定义配置
+
+[vue-cli](https://cli.vuejs.org/config/).

@@ -1,6 +1,6 @@
 <template>
   <div class="axios">
-    <h1>This is an Axios Page</h1>
+    <h1>这是一个 Axios 示例页面</h1>
     <div class="myInput">
       <a-input v-model:value="wd" placeholder="Basic usage">
         <template #prefix>

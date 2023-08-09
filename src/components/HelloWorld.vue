@@ -1,38 +1,54 @@
 <template>
-  <h1>Welcome to karl-cli Tool</h1>
-  <p>The cli has helped you install the following modules:</p>
+  <h1>Welcome to seb-cli Tool</h1>
+  <br />
+  <p>利用这个脚手架可以帮助你快速安装以下的模块~</p>
   <ul>
-    <li><a target="_blank" href="https://github.com/vuejs/router">Router</a></li>
+    <li>
+      <a target="_blank" href="https://github.com/vuejs/router">Router</a>
+    </li>
     <li><a target="_blank" href="https://github.com/vuejs/vuex">Vuex</a></li>
     <li><a target="_blank" href="https://github.com/axios/axios">Axios</a></li>
-    <li><a target="_blank" href="https://www.antdv.com/docs/vue/getting-started-cn">Ant-Design</a></li>
+    <li>
+      <a
+        target="_blank"
+        href="https://www.antdv.com/docs/vue/getting-started-cn"
+        >Ant-Design</a
+      >
+    </li>
   </ul>
-  <p>You can view the corresponding functions on the router page</p>
-  <p>This cli tool provides two template for users to choose:</p>
+  <br />
+  <p>提供了两个模板供你使用~ 👇</p>
   <ul>
     <li>
-      <a-tooltip title="Based on vue-cli">
-        vue3-template
-      </a-tooltip>
+      <a-tooltip title="Based on vue-cli"> vue3-template </a-tooltip>
     </li>
     <li>
-      <a-tooltip title="Based on vuepress">
-        vuepress-template
-      </a-tooltip>
+      <a-tooltip title="Based on vuepress"> vuepress-template </a-tooltip>
     </li>
   </ul>
-  <p>The following is other supplementary instructions about the project</p>
-  <p>CLI-Version: <strong>1.0.0</strong></p>
-  <p>Date: <strong>2022-07-18</strong></p>
-  <p>Document: <a target="_blank" href="https://ox4f5da2.github.io/plugin/guide/karl-cli.html"><strong>Instruction Manual</strong></a></p>
-  <p>Author: <a target="_blank" href="https://github.com/ox4f5da2"><strong>Karl_fang</strong></a></p>
-  <footer>Copyright © 2022 Karl_fang All Rights Reserved.</footer>
+  <p></p>
+  <br />
+  <p>CLI-Version: <strong>1.0.3</strong></p>
+  <p>Date: <strong>2023-07-18</strong></p>
+  <p>
+    Document:
+    <a target="_blank" href="https://www.npmjs.com/package/seb-cli"
+      ><strong>使用文档</strong></a
+    >
+  </p>
+  <p>
+    Author:
+    <a target="_blank" href="https://github.com/bhdgogogo"
+      ><strong>Seb</strong></a
+    >
+  </p>
+  <footer>Copyright © 2023 Seb All Rights Reserved.</footer>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld'
-}
+  name: "HelloWorld",
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
