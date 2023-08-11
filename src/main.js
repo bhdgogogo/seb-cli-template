@@ -6,4 +6,4 @@ import store from './store';
 import 'ant-design-vue/dist/antd.css'; // 导入css样式文件
 
 const app = createApp(App);
-app.use(store).use(router).use(Antd).mount('#app');
+app.use(store).use(router).use(Antd).mount('#app');``
