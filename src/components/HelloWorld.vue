@@ -45,10 +45,7 @@
   <footer>Copyright © 2023 Seb All Rights Reserved.</footer>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-};
+<script setup>
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

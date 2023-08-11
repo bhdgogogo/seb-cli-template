@@ -31,69 +31,50 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { apiExample } from "@/api/index";
 import { message } from "ant-design-vue";
 import { EditTwoTone, InfoCircleOutlined } from "@ant-design/icons-vue";
+import { ref } from "vue";
 
-export default {
-  name: "Axios",
-  components: {
-    EditTwoTone,
-    InfoCircleOutlined,
-  },
-  data() {
-    return {
-      data: [],
-      columns: [
-        {
-          title: "type",
-          dataIndex: "type",
-          width: 150,
-        },
-        {
-          title: "name",
-          dataIndex: "name",
-          width: 150,
-        },
-        {
-          title: "value",
-          dataIndex: "value",
-          width: 150,
-        },
-      ],
-      ifLoading: false,
-      text: "",
-      btnText: "Send Axios Request",
-    };
-  },
-  methods: {
-    async getResult() {
-      // 输入的内容是wd
-      const params = { name: this.text };
-      this.ifLoading = true;
-      this.btnText = "Requesting...";
-      /*       const { data } = await apiExample(params, this.callback);
-      if (data) {
-        this.data.push(data);
-        console.log("data: ", this.data);
-      } */
-      const test = await apiExample(params, this.callback);
-      if (test) {
-        this.data.push(test.data);
-        message.success("Get results successfully!");
-      } else {
-        message.error("Failed to get results!");
-      }
-    },
-    callback(status) {
-      // status: 成功返回SUCCESS, 失败返回FAIL
-      this.ifLoading = false;
+// 数据
 
-      // 按钮上的名字修改回来
-      this.btnText = "Send Axios Request";
-    },
+let data = ref([]);
+
+const columns = [
+  { title: "type", dataIndex: "type", width: 150 },
+  {
+    title: "name",
+    dataIndex: "name",
+    width: 150,
   },
+  {
+    title: "value",
+    dataIndex: "value",
+    width: 150,
+  },
+];
+
+let ifLoading = ref(false);
+let text = ref("");
+let btnText = ref("Send Axios Request");
+
+const getResult = async () => {
+  const params = { name: text.value };
+  ifLoading.value = true;
+  btnText.value = "Requesting...";
+  const test = await apiExample(params, callback);
+  if (test) {
+    data.value.push(test.data);
+    message.success("Get results successfully!");
+  } else {
+    message.error("Failed to get results!");
+  }
+};
+
+const callback = function () {
+  ifLoading.value = false;
+  btnText.value = "Send Axios Request";
 };
 </script>
 
